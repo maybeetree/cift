@@ -5,19 +5,19 @@ Used for namespace flattening.
 
 from cift import err
 from cift import types
-from cift.parser import CSTNode
-from cift.parser import Many
-from cift.parser import Maybe
-from cift.parser import Or
-from cift.parser import Parser
-from cift.parser import Seq
 from cift.parser import Symbol
+from cift.parser import Seq
+from cift.parser import Or
+from cift.parser import Maybe
+from cift.parser import Many
+from cift.parser import CSTNode
+from cift.parser import Parser
+import cift.grammar
+import cift.astextra
+import cift.semir
+import cift.debug
 from cift.shorthand import parse
 from cift.shorthand import parse_string
-import cift.astextra
-import cift.debug
-import cift.grammar
-import cift.semir
 
 # The function of `__all__` is:
 #
@@ -39,18 +39,18 @@ import cift.semir
 __all__ = [
     "err",
     "types",
-    "CSTNode",
-    "Many",
-    "Maybe",
-    "Or",
-    "Parser",
-    "Seq",
     "Symbol",
+    "Seq",
+    "Or",
+    "Maybe",
+    "Many",
+    "CSTNode",
+    "Parser",
+    "grammar",
+    "astextra",
+    "semir",
+    "debug",
     "parse",
     "parse_string",
-    "astextra",
-    "debug",
-    "grammar",
-    "semir",
     ]
 

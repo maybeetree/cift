@@ -6,7 +6,14 @@ This file is not yet complete. Only some CIF commands are handled.
 """
 
 from dataclasses import dataclass
-from enum import StrEnum
+
+try:
+    from enum import StrEnum
+except ImportError:
+    # Python3.10 doesn't have strenum
+    from enum import Enum
+    class StrEnum(str, Enum):
+        pass
 
 from cift import grammar as gr
 from cift.parser import Symbol
